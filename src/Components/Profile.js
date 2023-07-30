@@ -18,13 +18,29 @@ const Profile = () =>{
   }, [user]);
 
   return (
-    <div>
-      <h2>Profile</h2>
+    <div className='profile_container'>
+      <h2>Profile Page</h2>
       {userData ? ( 
-        <div>
-          <h5>Username : <span>{userData.username}</span></h5>
-          <h5>Name : <span>{userData.firstName} {userData.lastName}</span></h5>
-          <h5>Email : <span>{userData.email}</span></h5>  
+        <div className='userDetails'>
+          <img src={userData.image} alt='#' />
+          <h4>Username : <span>{userData.username}</span></h4>
+          <h4>Name : <span>{userData.firstName} {userData.maidenName} {userData.lastName}</span></h4>
+          <h4>Email : <span>{userData.email}</span></h4>  
+          <h4>Gender : <span>{userData.gender}</span></h4>  
+          <h4>DOB : <span>{userData.birthDate}</span></h4>  
+          <h4>Age : <span>{userData.age}</span></h4>  
+          <h4>Blood_Group : <span>{userData.bloodGroup}</span></h4>  
+          <h4>Height : <span>{userData.height} cms.</span></h4> 
+          <h4>Weight : <span>{userData.weight} kgs</span></h4> 
+          <h4>Hair : <span>{userData.hair.type} {userData.hair.color}</span></h4> 
+          <h4>Eye Color : <span>{userData.eyeColor}</span></h4>  
+          <h4>Email : <span>{userData.email}</span></h4>
+          <h4>Phone No. : <span>{userData.phone}</span></h4>
+          <h4>University : <span>{userData.university}</span></h4>
+          <h4>Company : <span>{userData.address.address} 
+          {userData.address.city} {userData.address.postalCode}
+          </span></h4>
+
         </div>
       ) : (
         <h5>No user Found !</h5>

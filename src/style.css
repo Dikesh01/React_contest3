@@ -81,6 +81,30 @@ span{
   font-weight: lighter;
 }
 
+.profile_container{
+  position: relative;
+  margin: 4% 10%;
+  width: 50%;
+}
+.profile_container > h2{
+  background-color: green;
+  color: yellow;
+  padding-left: 20px;
+}
+
+.userDetails{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userDetails img{
+  position: absolute;
+  right: 0;
+
+}
+
 @media (max-width: 421px){
 
   .login_page form{
