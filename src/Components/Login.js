@@ -16,8 +16,9 @@ const Login = () =>{
         // console.log(username);
         // console.log(password);
 
-        if(!username || ! password){
+        if(!username || !password){
             setError("Username and password required!")
+            return;
         }
 
         fetch('https://dummyjson.com/auth/login', {
@@ -36,7 +37,8 @@ const Login = () =>{
             })
             .then((data) => {
               dispatch(loginSuccess(data));
-              setError('');
+              setError('')
+              alert("User Logged in Successfully !")
               navigate("/profile")
 
             })

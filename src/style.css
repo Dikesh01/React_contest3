@@ -76,3 +76,15 @@ form #forgot_password{
 p{
   font-size: 12px;
 }
+
+span{
+  font-weight: lighter;
+}
+
+@media (max-width: 421px){
+
+  .login_page form{
+    padding: 50px 20px;
+    background-color: lightgreen;
+  }
+}
